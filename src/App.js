@@ -14,6 +14,10 @@ class App extends Component {
   componentDidMount() {
     this.handleAddTimer()
   }
+  componentDidUpdate() {
+    this.timer.current.style.color =
+  "#" + Math.floor(Math.random() * 16777215).toString(16);
+  }
 
   render() {
     console.log(this.state.timerIDs);
